@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Smart Wallet</string>
+
+    <string-array name="payment_type_array">
+        <item>--Please select payment type</item>
+        <item>entertainment</item>
+        <item>food</item>
+        <item>taxes</item>
+        <item>travel</item>
+        <item>other</item>
+    </string-array>
+
+</resources>
