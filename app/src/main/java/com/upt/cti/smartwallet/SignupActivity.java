@@ -127,10 +127,6 @@ public class SignupActivity extends AppCompatActivity {
                 });
     }
 
-    private void signOut() {
-        mAuth.signOut();
-        updateUI(null);
-    }
 
     private boolean validateForm() {
         boolean valid = true;
@@ -162,14 +158,12 @@ public class SignupActivity extends AppCompatActivity {
 
             findViewById(R.id.lSignIn).setVisibility(View.GONE);
             findViewById(R.id.email_password_fields).setVisibility(View.GONE);
-            findViewById(R.id.bSignOut).setVisibility(View.VISIBLE);
         } else {
             tStatus.setText("Signed out");
             tDetail.setText(null);
 
             findViewById(R.id.lSignIn).setVisibility(View.VISIBLE);
             findViewById(R.id.email_password_fields).setVisibility(View.VISIBLE);
-            findViewById(R.id.bSignOut).setVisibility(View.GONE);
         }
     }
 
@@ -180,9 +174,6 @@ public class SignupActivity extends AppCompatActivity {
                 break;
             case R.id.bSignIn:
                 signIn(eEmail.getText().toString(), ePass.getText().toString());
-                break;
-            case R.id.bSignOut:
-                signOut();
                 break;
         }
     }
